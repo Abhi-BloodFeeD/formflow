@@ -3,8 +3,10 @@
 "use client";
 
 import { useState } from "react";
-import { parseExamUrl } from "@/services/schemaParser";
-import { ExamSchema } from "@/types/exam";
+import { parseExamUrl } from "../services/schemaParser"
+// @/services/schemaParser";
+import { ExamSchema } from "../types/exam"
+// @/types/exam";
 
 export default function ExamUrlParser() {
 

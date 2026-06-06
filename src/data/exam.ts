@@ -1,6 +1,6 @@
 // src/data/exams.ts
 
-import { ExamSchema } from "@/types/exam";
+import { ExamSchema } from "../types/exam";
 
 export const UPSC_CSE: ExamSchema = {
   id: "upsc-cse",

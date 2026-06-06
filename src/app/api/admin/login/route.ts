@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import { connectDB } from "@/lib/db";
-import { Admin } from "@/models/Admin";
+import { connectDB } from "../../../../lib/db"
+// /lib/db";
+import { Admin } from "../../../../models/Admin"
+// /models/Admin";
 
 export async function POST(req: Request) {
   await connectDB();

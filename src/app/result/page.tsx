@@ -3,7 +3,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useFormStore } from "@/store/useFormStore";
+import { useExamStore } from "../../store/useExamStore"
 
 export default function ResultPage() {
 
@@ -15,7 +15,7 @@ export default function ResultPage() {
     selectedExam,
     isPremium,
     resetForm,
-  } = useFormStore();
+  } = useExamStore();
 
   const downloadFile = (
     file: File | null,

@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 
 export default function HomePage() {
-  // Always redirect to admin system entry
-  redirect("/admin/page.tsx");
+  // Root entry of your system
+  // Always send user to admin login
+  redirect("/admin/login");
 }

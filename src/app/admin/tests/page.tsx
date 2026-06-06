@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useExamStore } from "@/store/useExamStore";
+import { useExamStore } from "../../../store/useExamStore"
+// /store/useExamStore";
 
 type Test = {
   id: string;

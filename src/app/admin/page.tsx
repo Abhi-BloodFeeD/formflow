@@ -1,16 +1,22 @@
 "use client";
 
-import { useExamStore } from "../../store/useFormStore";
+import { useExamStore } from "../../store/useExamStore";
 import { useRouter } from "next/navigation";
 
 export default function AdminPage() {
   const router = useRouter();
 
-  const { exams, selectedExam, setSelectedExam } = useExamStore();
+  const { exams, selectedExam, setSelectedExam } =
+    useExamStore();
 
-  const handleExamChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleExamChange = (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     const examId = e.target.value;
-    const exam = exams.find((ex) => ex.id === examId) || null;
+
+    const exam =
+      exams.find((ex) => ex.id === examId) || null;
+
     setSelectedExam(exam);
   };
 
@@ -20,7 +26,7 @@ export default function AdminPage() {
       return;
     }
 
-    router.push(`/admin/tests`);
+    router.push("/admin/tests");
   };
 
   return (
@@ -28,7 +34,7 @@ export default function AdminPage() {
       <h1>Admin Dashboard</h1>
 
       <div style={{ marginTop: "20px" }}>
-        <label>Select Exam:</label>
+        <label>Select Exam: </label>
 
         <select
           value={selectedExam?.id || ""}

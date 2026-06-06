@@ -5,8 +5,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-import { processImage } from "@/services/imageProcessor";
-import { useFormStore } from "@/store/useFormStore";
+import { processImage } from "../../services/imageProcessor"
+
+import { useExamStore } from "../../store/useExamStore"
 
 export default function ProcessingPage() {
 
@@ -25,7 +26,7 @@ export default function ProcessingPage() {
 
     isPremium,
     setIsProcessing,
-  } = useFormStore();
+  } = useExamStore();
 
   useEffect(() => {
 

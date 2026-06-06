@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "@/lib/db";
-import { Test } from "@/models/Test";
+import { connectDB } from "../../../lib/db";
+import { Test } from "../../../models/Test";
 
 export async function GET(req: Request) {
   await connectDB();

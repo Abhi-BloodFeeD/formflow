@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useExamStore } from "../../../../store/useFormStore";
+import { useExamStore } from "../../../../store/useExamStore";
 
 type Question = {
   question: string;

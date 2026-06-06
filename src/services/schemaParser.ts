@@ -1,6 +1,6 @@
 // src/services/schemaParser.ts
 
-import { ExamSchema } from "@/types/exam";
+import { ExamSchema } from "../types/exam";
 
 interface ParsedSchemaResult {
   success: boolean;

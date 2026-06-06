@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/abhinavbhardwaj/formflow/src/app/page.tsx"],"sourcesContent":["import { redirect } from \"next/navigation\";\n\nexport default function HomePage() {\n  // Always redirect to admin system entry\n  redirect(\"/admin/page.tsx\");\n}"],"names":["HomePage"],"mappings":";;;;AAAA;AAAA;;AAEe,SAASA;IACtB,wCAAwC;IACxC,IAAA,iMAAQ,EAAC;AACX"}}]
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/abhinavbhardwaj/formflow/src/app/page.tsx"],"sourcesContent":["import { redirect } from \"next/navigation\";\n\nexport default function HomePage() {\n  // Root entry of your system\n  // Always send user to admin login\n  redirect(\"/admin/login\");\n}"],"names":["HomePage"],"mappings":";;;;AAAA;AAAA;;AAEe,SAASA;IACtB,4BAA4B;IAC5B,kCAAkC;IAClC,IAAA,iMAAQ,EAAC;AACX"}}]
 }
