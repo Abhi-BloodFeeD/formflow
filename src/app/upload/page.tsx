@@ -10,8 +10,9 @@ import SidebarAds from "@/components/SidebarAds";
 import { useFormStore } from "@/store/useFormStore";
 
 import {
-  UPSC_SCHEMA,
-} from "@/types/exam";
+  ALL_EXAMS,
+  getExamById,
+} from "@/data/exams";
 
 export default function UploadPage() {
 
@@ -75,23 +76,32 @@ export default function UploadPage() {
               w-full
               max-w-md
             "
-            value={
-              selectedExam?.id || ""
-            }
-            onChange={() =>
-              setSelectedExam(
-                UPSC_SCHEMA
-              )
-            }
+            value={selectedExam?.id || ""}
+            onChange={(e) => {
+
+              const exam =
+                getExamById(
+                  e.target.value
+                );
+
+              if (exam) {
+                setSelectedExam(exam);
+              }
+
+            }}
           >
             <option value="">
               Select Exam
             </option>
 
-            <option value="upsc-cse">
-              UPSC Civil Services
-            </option>
-
+            {ALL_EXAMS.map((exam) => (
+              <option
+                key={exam.id}
+                value={exam.id}
+              >
+                {exam.name}
+              </option>
+            ))}
           </select>
 
         </div>

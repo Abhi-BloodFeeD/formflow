@@ -1,9 +1,9 @@
 // src/store/useFormStore.ts
 
 import { create } from "zustand";
-import { ExamSchema } from "@/types/exam";
+import { ExamSchema } from "../types/exam";
 
-interface FormStore {
+interface ExamStore {
   // Selected Exam
   selectedExam: ExamSchema | null;
 
@@ -43,7 +43,7 @@ interface FormStore {
   resetForm: () => void;
 }
 
-export const useFormStore = create<FormStore>((set) => ({
+export const useExamStore = create<ExamStore>((set) => ({
   // Initial State
 
   selectedExam: null,

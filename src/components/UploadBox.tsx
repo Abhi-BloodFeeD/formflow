@@ -4,7 +4,7 @@
 
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { saveFile } from "@/services/indexedDb";
+import { saveFile } from "../services/indexedDb";
 
 interface UploadBoxProps {
   label: string;
